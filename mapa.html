@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="refresh">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.js"></script>
+  	<script src="js/jquery-1.10.2.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/jquery-1.10.2.min.js"></script>
+  	<script src="js/modernizr-2.6.2.js"></script>
+  	<script type="text/javascript" src="js/index.js"></script>
+  	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARvOIdhpkL_b1B0UXUe8n2RjZx3Fn1wV0&callback=initMap">
+	</script>
+	<title>MAPA</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body id="mapa">		
+	<nav class="navbar navbar-inverse  navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+     			 </button>
+				<a class="navbar-brand" href="home.html">HOME</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="mapa.html">Mapa</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container" >
+        <fieldset>
+			<legend>  
+				<div class="btn-group">
+				 	<button type="button" class="btn btn-primary" onclick="alterCategoria(0)">Intensidade</button>
+					<button type="button" class="btn btn-primary" onclick="alterCategoria(1)">Posição</button>
+  				</div>
+  			</legend>
+				<div class="row">
+					<div class="col-xs-10" id="map"></div>
+					<div class="col-xs-1" id="opcao">
+					    <div class="input-group ">
+				            <div class="material-switch pull-left">
+				            	<h4>CLARO</h4> 
+				               	<input id="CLARO" type="checkbox" checked="true" class="form-control" onchange="javascript:Check(this);RecarregaMap();"/>
+					 			<label for="CLARO" class="label-danger"></label> 
+				               	 	
+				           	</div>
+						</div><br>
+						<div class="input-group">
+				            <div class="material-switch pull-left">
+				            	<h4>VIVO</h4>
+				              	<input id="VIVO" type="checkbox" checked="true" onchange="javascript:Check(this);RecarregaMap();"/>
+				               	<label for="VIVO" class="label-primary"></label>
+				               	
+				            </div>
+						</div><br>
+						<div class="input-group">
+				            <div class="material-switch pull-left">
+				            	<h4>TIM</h4>
+				              	<input id="TIM" type="checkbox" checked="false" onchange="javascript:Check(this);RecarregaMap();"/>
+				                <label for="TIM" class="label-success"></label>
+				               
+				            </div>
+						</div><br>
+						<div class="input-group">
+							<div class="material-switch pull-left">
+								<h4>OI</h4>
+								<input id="OI" type="checkbox" checked="true" onchange="javascript:Check(this);RecarregaMap();"/>
+							    <label for="OI" class="label-info"></label>
+							    
+					    	</div>
+						</div><br>
+						<div class="input-group">
+						    <div class="material-switch pull-left">
+						    	<h4>NEXTEL</h4>
+							    <input id="NEXTEL" type="checkbox" checked="true" onchange="javascript:Check(this);RecarregaMap();"/>
+							    <label for="NEXTEL" class="label-warning"></label>
+							    
+							</div>
+						</div><br>
+						<div class="input-group">
+						    <div class="material-switch pull-left">
+						    	<h4>TODAS</h4>
+						        <input  type="checkbox" id="TODAS" checked="true" onchange="javascript:Check(this);RecarregaMap();"/>
+						        <label for="TODAS" class="label-default"></label>
+						        
+						    </div>
+						</div><br>
+					</div>
+				</div>
+        </fieldset>
+	</div>
+</body>
+</html>
